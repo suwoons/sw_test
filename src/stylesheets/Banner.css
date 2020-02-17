@@ -1,0 +1,30 @@
+div .col-md-1point5 .border-right {
+    border-right: 2px gray;
+}
+
+.row.border-bottom {
+    height: 100%;
+}
+
+.row.border-bottom .brand {
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.row.border-bottom .bannerText {
+    padding-top: 15px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.currentProfile {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.currentProfile img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px;
+}
