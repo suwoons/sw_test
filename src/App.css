@@ -3,18 +3,34 @@ html {
 }
 body {
   min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 main.container-fluid {
   min-height: 100vh;
   overflow-y: hidden; /* don't show content that exceeds my height */
   overflow-x: hidden;
+  background-color: rgb(239,242,245);
 }
 
 .col-md-nav {
   width: 4.5%;
+  min-height: 100vh;
 }
 
 .col-md-rest {
   width: 95.5%;
-  padding-left: 15px;
+}
+
+.main\ h-100 .col-md-12 {
+  padding: 0px;
+  background-color: rgb(239,242,245);
+}
+
+.col-md-teams {
+  width: 75%;
+}
+
+.col-md-activity {
+  width: 25%;
 }

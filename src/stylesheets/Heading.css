@@ -1,11 +1,7 @@
-.row.border-bottom {
-    height: 100%;
-}
-
-.row.border-bottom .title {
+.title {
     padding-top: 10px;
     padding-left: 20px;
     text-align: left;
-    font-weight:bold;
+    font-weight: bold;
     font-size: xx-large;
 }

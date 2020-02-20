@@ -2,29 +2,72 @@ div .col-md-1point5 .border-right {
     border-right: 2px gray;
 }
 
-.row.border-bottom {
+.row .border-bottom {
     height: 100%;
+    background-color: white;
 }
 
 .row.border-bottom .brand {
-    padding: 15px 25px;
+    padding: 20px 25px 0px 25px;
     text-align: center;
+    font-weight: 600;
+    color: rgb(140, 139, 139);
 }
 
 .row.border-bottom .bannerText {
-    padding-top: 15px;
+    padding-top: 20px;
     padding-left: 10px;
     text-align: left;
+    font-size: medium;
+    font-weight: 500;
 }
 
 .currentProfile {
     text-align: right;
-    padding-right: 15px;
+    padding-right: 35px;
+    font-size: small;
 }
 
-.currentProfile img{
+.currentProfile p {
+    display: inline;
+    text-align: right;
+    font-size: small;
+    font-weight: 500;
+    color: rgb(121, 121, 121);
+}
+
+.currentProfile img#profile{
     height: 40px;
     width: 40px;
     border-radius: 50%;
     margin: 10px;
+    margin-bottom: 20px;
+}
+
+.currentProfile img#inbox{
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+}
+
+.currentProfile .badge {
+    position: absolute;
+    top: 12px;
+    right: 200px;
+    padding: 3px 5px;
+    vertical-align: middle;
+    font-weight: 500;
+    border-radius: 50%;
+    background: rgb(41,149,218);
+    color: white;
+    border: 1px solid white;
+  }
+
+  .currentProfile .triangle-down {
+    display: inline-block;
+    border-color: rgb(175, 175, 175) transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0px;
+    width: 0px;
 }

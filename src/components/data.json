@@ -125,7 +125,8 @@
         "avatar": "https://d1bb37ap2qun5z.cloudfront.net/sites/default_user_avatars/000/000/002/display/nicdesu.jpg?1394032656"
       },
       "action": "archived_team",
-      "target": "Uber"
+      "target": "Uber",
+      "created_at": "6 hours ago"
     },
     {
       "id": 4,

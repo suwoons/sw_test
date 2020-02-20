@@ -20,10 +20,14 @@ class Banner extends Component {
                     </div>
                 </div>
 
-                <div class="col-md-3 border-left">
+                <div class="col-md-3">
                     <div class="currentProfile">
-                        Hello, {currentUser.name}
-                        <img src={currentUser.avatar}></img>
+                        <img id="inbox" src="https://i.ibb.co/b2mGpZ6/inbox-mail-2.png" alt="inbox-mail-2" border="0"></img>
+                        <span class="badge">{currentUser.notifications_count}</span>
+                        <p id="greeting">Hello, {currentUser.name}</p>
+                        <a href="#">
+                        <img id="profile" src={currentUser.avatar}></img>
+                        <div class="triangle-down"></div></a>
                     </div>
                 </div>
             </div>

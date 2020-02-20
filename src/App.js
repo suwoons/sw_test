@@ -25,29 +25,30 @@ class App extends Component {
                 </div>
                 
                 <div class="col-md-rest">
-                  <div class="row" style={{height: "60px"}}>
+                  <div class="top" style={{height: "60px"}}>
                     <div class="col-md-12">
                       <Banner></Banner>
                     </div>
                   </div>
 
-                  <div class="row" name="heading" style={{height: "110px"}}>
+                  <div class="top" style={{height: "110px",
+                    backgroundColor: "white"}}>
                     <div class="col-md-12">
                       <Heading></Heading>
                     </div>
                   </div>
 
-                  <div class="row h-100" name="main">
+                  <div class="main h-100">
                     <div class="col-md-12" 
                     style={{padding: "0px", 
                     backgroundColor: "rgb(239,242,245)"}}>
 
                       <div class="row">
-                        <div class="col-md-9" name="teams">
+                        <div class="col-md-teams" name="teams">
                           <Teams></Teams>
                         </div>
 
-                        <div class="col-md-3" name="activity">
+                        <div class="col-md-activity" name="activity">
                           <Activity></Activity>
                         </div>
                       </div>
