@@ -8,13 +8,13 @@ class Banner extends Component {
     render() {
         return (
             <div class="row border-bottom">
-                <div class="col-md-1point5 border-right">
+                <div class="col-md-1point5">
                     <div class="brand">
                         NARWHAL
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col border-left">
                     <div class="bannerText">
                     Teams
                     </div>

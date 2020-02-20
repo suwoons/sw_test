@@ -25,7 +25,7 @@ class App extends Component {
                 </div>
                 
                 <div class="col-md-rest">
-                  <div class="top" style={{height: "60px"}}>
+                  <div class="top">
                     <div class="col-md-12">
                       <Banner></Banner>
                     </div>
