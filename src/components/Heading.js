@@ -6,7 +6,9 @@ class Heading extends Component {
     render() {
         return (
             <div class="title">
-                Teams
+                <img src="https://i.ibb.co/Jv7WkyL/teams-grey.png" alt="teams-grey" border="0"></img>
+                <span class="title-words">Teams</span>
+                <button class="create">CREATE NEW TEAM</button>
             </div>
         );
     }

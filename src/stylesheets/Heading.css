@@ -2,6 +2,30 @@
     padding-top: 10px;
     padding-left: 20px;
     text-align: left;
-    font-weight: bold;
+    font-weight: 500;
     font-size: xx-large;
+}
+
+.title img {
+    width: 60px;
+    height: 60px;
+    object-position: cover; 
+    display: inline-block;
+    margin-left: -10px;
+}
+
+.title span .title-words {
+    display: inline-block;
+}
+
+.title .create {
+    float: right;
+    font-size: 9pt;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(64, 210, 191);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 15px;
 }

@@ -4,7 +4,6 @@ nav.nav-side-menu {
     width: 100%;
     padding: 0px;
     top: 0;
-    position: sticky;
 }
 
 div .navbar-nav {
@@ -13,13 +12,19 @@ div .navbar-nav {
 
 a.nav-item.nav-link {
     width: 100%;
+    height: 60px;
 }
 
-a.nav-item.nav-link.active {
+a.nav-item.nav-link.active, a.nav-item.nav-link:hover {
     background-color: rgb(41,149,218);
 }
 
 img {
     width: 100%;
     height: 100%;
+    object-position: cover; 
+}
+
+a.nav-item.nav-link.active img,  a.nav-item.nav-link:hover img{
+    filter: brightness(0) invert(1);
 }

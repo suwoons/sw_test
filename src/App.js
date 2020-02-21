@@ -41,7 +41,7 @@ class App extends Component {
                   <div class="main h-100">
                     <div class="col-md-12" 
                     style={{padding: "0px", 
-                    backgroundColor: "rgb(239,242,245)"}}>
+                    backgroundColor: "rgb(239,242,245)", marginBottom: "40px"}}>
 
                       <div class="row">
                         <div class="col-md-teams" name="teams">
