@@ -1,6 +1,7 @@
 .title {
     padding-top: 10px;
     padding-left: 20px;
+    padding-right: 20px;
     text-align: left;
     font-weight: 500;
     font-size: xx-large;
@@ -27,5 +28,52 @@
     border: none;
     border-radius: 5px;
     outline: none;
-    padding: 5px 15px;
+    margin-top: 15px;
+    padding: 5px 10px;
+}
+
+.title .create:active {
+    transform: translate(0px, 1px);
+    background-color: rgb(54, 182, 165);
+}
+
+.title .col {
+    overflow: hidden;
+    height: 40px;
+}
+
+.title .topnav {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.title .topnav input[type=text] {
+    border: none;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+.title ::placeholder {
+    color: rgb(161, 161, 161);
+}
+
+.title svg {
+    font-size: 15px;
+    color: rgb(161, 161, 161);
+}
+
+.title :focus::placeholder, .title :hover::placeholder {
+    color: rgb(88, 142, 204);
+}
+
+.title textarea:focus, input[type=text]:focus {
+    outline: 0;
+    border: 0;
+}
+
+.title svg:hover, .title svg:hover + ::placeholder {
+    color: rgb(88, 142, 204);
 }

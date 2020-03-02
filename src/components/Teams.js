@@ -22,8 +22,9 @@ class Teams extends Component {
                     </span>
                     </div>
                 </div>
+
                 <div class="container">
-                <ul>{teamsList.map(t => (<li key={t.id} >{t.name}</li>))}</ul>
+                    <ul>{teamsList.map(t => (<li key={t.id} >{t.name}</li>))}</ul>
                 </div>
             </div>
         );

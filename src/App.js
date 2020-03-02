@@ -20,7 +20,7 @@ class App extends Component {
           <body>
             <main class="container-fluid">
               <div class="row" style={{minHeight: "100vh"}}>
-                <div class="col-md-nav">
+                <div className="col-md-nav">
                   <Navigation></Navigation>
                 </div>
                 

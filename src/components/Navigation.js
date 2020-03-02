@@ -16,8 +16,8 @@ class Navigation extends Component {
     
     render() {
         return (
-            <nav class="nav-side-menu" id="navbar-container">
-                <div class="navbar-nav">
+            <nav className="nav-side-menu" id="navbar-container">
+                <div className="navbar-nav">
 
                 <img src="https://i.ibb.co/VSnBN2v/whale.png" alt="whale" border="0" />
 
