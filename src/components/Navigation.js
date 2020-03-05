@@ -7,7 +7,6 @@ class Navigation extends Component {
         for (var i = 0; i < navButtons.length; i++) {
             navButtons[i].addEventListener("click", function() {
                 var current = document.getElementsByClassName("active");
-                console.log("here")
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
             })

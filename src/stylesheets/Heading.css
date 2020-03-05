@@ -78,21 +78,25 @@
     color: rgb(88, 142, 204);
 }
 
-.tab-list {
-    border-bottom: 1px solid #ccc;
-    padding-left: 0;
-    font-size: small;
-    float: left;
-}
-
-.tab-list-item {
+.title .tab-list {
+    position: absolute;
     display: inline-block;
-    list-style: none;
-    padding: 0.5rem 0.75rem;
+    bottom: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-.tab-list-active {
+.title .tab-list button {
+    border: none;
+    font-size: 10pt;
+    font-weight: 600;
+    padding: 8px 20px;
+    margin: 0;
     background-color: white;
-    border: solid #ccc;
-    border-width: 1px 1px 0 1px;
+    outline: none;
+}
+
+.title .tab-list button.active {
+    color: rgb(32,145,230);
+    border-bottom: 2px solid rgb(32,145,230);
 }

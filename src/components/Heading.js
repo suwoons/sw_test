@@ -13,6 +13,35 @@ class Heading extends Component {
         };
     }
 
+    handleActiveTab() {
+        var current = document.getElementById("tabnav").getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        
+        var tab;
+        switch(this.props.tab) {
+            case "All":
+                tab = document.getElementById("allTab");
+                break;
+            case "Favorites":
+                tab = document.getElementById("favTab");
+                break;
+            case "Archived":
+                tab = document.getElementById("archTab");
+                break;
+            default:
+                console.error("Could not find tab");
+        }
+        tab.className += " active";
+    }
+
+    componentDidMount() {
+        this.handleActiveTab();
+    }
+
+    componentDidUpdate() {
+        this.handleActiveTab();
+    }
+
     render() {
         console.log("current tab: ", this.props.tab);
 
@@ -42,12 +71,10 @@ class Heading extends Component {
                             return e.target.placeholder = "Search team name ...";}}/>
                     </div>
 
-                    <div class="tab-list">
-                    <div class="w3-bar w3-black">
-                        <button class="w3-bar-item w3-button active" onClick={() => this.props.handleTabChange("All")}>All</button>
-                        <button class="w3-bar-item w3-button" onClick={() => this.props.handleTabChange("Favorites")}>Favorites</button>
-                        <button class="w3-bar-item w3-button" onClick={() => this.props.handleTabChange("Archived")}>Archived</button>
-                    </div>
+                    <div class="tab-list" id="tabnav">
+                        <button className="tab-list-item active" id="allTab" onClick={() => this.props.handleTabChange("All")}>All</button>
+                        <button className="tab-list-item" id="favTab" onClick={() => this.props.handleTabChange("Favorites")}>Favorites</button>
+                        <button className="tab-list-item" id="archTab" onClick={() => this.props.handleTabChange("Archived")}>Archived</button>
                     </div>
                 </div>
             </div>
