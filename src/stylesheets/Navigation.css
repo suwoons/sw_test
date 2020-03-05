@@ -15,6 +15,10 @@ a.nav-item.nav-link {
     height: 60px;
 }
 
+a.nav-item.nav-link :last-child {
+    margin-top: auto;
+}
+
 a.nav-item.nav-link.active, a.nav-item.nav-link:hover {
     background-color: rgb(41,149,218);
 }

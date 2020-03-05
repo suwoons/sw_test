@@ -25,12 +25,12 @@ class Activity extends Component {
                 </div>
                 <div class="container">
                     <ul>{feed.map(f => 
-                    <li key={f.id}><img id="avatar" src={f.person.avatar}></img>
+                    <li key={f.id}><img id="avatar" src={f.person.avatar} alt="avatar"></img>
                         <span class="description">
                             <b>{f.person.name} </b>  
                             {describe(f.action)} <b>{f.target}</b>
                             {f.action === "increased_quota"
-                            ? "\'s quota"
+                            ? "'s quota"
                             : ""}
                             <p class="time">
                             {f.created_at}

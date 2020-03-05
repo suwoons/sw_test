@@ -3,11 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-import data from "./data"; 
 import "../stylesheets/Heading.css"
 
 class Heading extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeTab: this.props.tab,
+        };
+    }
+
     render() {
+        console.log("current tab: ", this.props.tab);
+
         return (
             <div class="title">
                 <img src="https://i.ibb.co/Jv7WkyL/teams-grey.png" alt="teams-grey" border="0"></img>
@@ -20,7 +28,7 @@ class Heading extends Component {
                     {/* When either icon or textbox is hovered or focused, whole area changes to blue */}
                     <div class="topnav"
                         onMouseEnter={(e) => document.getElementById("searchIcon").style.color = "rgb(88, 142, 204)"}
-                        onMouseLeave={(e) => document.activeElement == document.getElementById("searchBox") 
+                        onMouseLeave={(e) => document.activeElement === document.getElementById("searchBox") 
                             ? document.getElementById("searchIcon").style.color = "rgb(88, 142, 204)"
                             : document.getElementById("searchIcon").style.color = "rgb(161, 161, 161)"}>
                     
@@ -32,7 +40,14 @@ class Heading extends Component {
                         onBlur={(e) => {
                             document.getElementById("searchIcon").style.color = "rgb(161, 161, 161)";
                             return e.target.placeholder = "Search team name ...";}}/>
+                    </div>
 
+                    <div class="tab-list">
+                    <div class="w3-bar w3-black">
+                        <button class="w3-bar-item w3-button active" onClick={() => this.props.handleTabChange("All")}>All</button>
+                        <button class="w3-bar-item w3-button" onClick={() => this.props.handleTabChange("Favorites")}>Favorites</button>
+                        <button class="w3-bar-item w3-button" onClick={() => this.props.handleTabChange("Archived")}>Archived</button>
+                    </div>
                     </div>
                 </div>
             </div>

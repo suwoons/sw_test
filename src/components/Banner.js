@@ -26,7 +26,7 @@ class Banner extends Component {
                         <span class="badge">{currentUser.notifications_count}</span>
                         <p id="greeting">Hello, {currentUser.name}</p>
                         <a href="#">
-                        <img id="profile" src={currentUser.avatar}></img>
+                        <img id="profile" src={currentUser.avatar} alt="my_avatar"></img>
                         <div class="triangle-down"></div></a>
                     </div>
                 </div>

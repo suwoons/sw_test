@@ -32,14 +32,37 @@
 
 .teams .container ul {
     padding: 0; /* remove default padding and all margins! */
-    margin: 0;
+    margin: 0 auto;
+    text-align: left;
     list-style-type: none; /* remove the • */
 }
 
 .teams .container ul li {
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
     margin: 5px;
-    background-color: red;
     display: inline-block;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.teams .container ul li #team_header { 
+    height: 20px;
+    padding: 15px;
+}
+
+/* figure out how to cut off text... */
+.teams .container ul li #team_info { 
+    font-size: 9pt;
+    color: rgb(116, 116, 116);
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    height: 50px;
+    white-space: wrap;
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.teams .container ul li #team_stats { 
+    border-top: 1px solid rgb(223, 223, 223);
+    padding: 15px;
 }
