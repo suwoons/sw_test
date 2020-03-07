@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Activity from './components/Activity';
 import Banner from './components/Banner';
-import Heading from './components/Heading';
 import Navigation from './components/Navigation';
-import Display from './components/Display';
 import Main from './components/Main';
 
 class App extends Component {
