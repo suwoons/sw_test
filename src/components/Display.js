@@ -28,7 +28,8 @@ class Display extends Component {
         this.state = {
             displayedTeams: teamsList, // implement getTeams function; change to []
         };
-        this.Teams = this.getTeams.bind(this);
+        this.getTeams = this.getTeams.bind(this);
+        this.handleFavoriteToggle = this.handleFavoriteToggle.bind(this);
     }
 
     getTeams(tab) {
@@ -45,13 +46,17 @@ class Display extends Component {
             console.error("Invalid tab");
         }
         this.setState({displayedTeams: response});
-        console.log("response: ", response);
+    }
+
+    handleFavoriteToggle(e, teamId) {
+        e.preventDefault();
+        console.log("toggle favourite");
     }
 
     shouldComponentUpdate(nextProps, nextState) {
         console.log("scu: ", this.props.tab !== nextProps.tab);
         return this.props.tab !== nextProps.tab ||
-            this.state.displayedTeams !== nextState.displayedTeams;
+            this.state.displayedTeams !== nextState.displayedTeams
     }
 
     componentDidMount() {
@@ -79,12 +84,46 @@ class Display extends Component {
                     </div>
                 </div>
 
-                <div class="container">
+                <div id="teams-display" className="container">
                     <ul>{this.state.displayedTeams.map(t => 
-                        (<li key={t.id} >
-                            <div class="row d-inline-flex w-100 ml-0" id="team_header">{t.name}</div>
-                            <div class="row d-inline-flex w-100 ml-0" id="team_info">{t.description}</div>
-                            <div class="row d-inline-flex w-100 ml-0" id="team_stats">stats</div>
+                        (<li key={t.id} 
+                            className={(t.is_archived === true
+                                ? "archived"
+                                : "")}>
+                            <div class="row d-inline-flex w-100 ml-0" id="team_header">
+                                <img id="team-image" src={t.image} alt="image"></img>
+                                <span id="team-name">{t.name}
+                                <p id="team-date">{t.created_at !== undefined
+                                    ? "Created " + t.created_at
+                                    : t.is_archived === true 
+                                    ? "Archived"
+                                    : ""}</p></span>
+                                <span id="favorite-star">{t.is_archived === true
+                                    ? ""
+                                    : t.is_favorited === true
+                                        ? <a href="#"><img src="https://i.ibb.co/dcJT5F7/star-filled.png" alt="star-filled"
+                                            onMouseOver={(e) => e.target.src="https://i.ibb.co/wcyG9ws/star-outline.png"}
+                                            onMouseLeave={(e) => e.target.src="https://i.ibb.co/dcJT5F7/star-filled.png"}
+                                            onClick={(e) => this.handleFavoriteToggle(e, t.id)}/></a>
+                                        : <a href="#"><img src="https://i.ibb.co/wcyG9ws/star-outline.png" alt="star-outline"
+                                        onMouseOver={(e) => e.target.src="https://i.ibb.co/dcJT5F7/star-filled.png"}
+                                        onMouseLeave={(e) => e.target.src="https://i.ibb.co/wcyG9ws/star-outline.png"}
+                                        onClick={(e) => this.handleFavoriteToggle(e, t.id)}/></a>}
+                                </span></div>
+
+                            <div class="row d-inline-flex w-100 ml-0" id="team_info_wrapper">
+                                <p>{t.description}</p></div>
+                            
+                            <div class="row d-inline-flex w-100 ml-0" id="team_stats">
+                                <span id="team-campaigns">
+                                    <img src="https://i.ibb.co/p2pMv5r/message.png" 
+                                        style={{height: "40px", width: "41px", marginTop: "2px",marginRight: "-8px", marginBottom: "2px"}} alt="campaigns"/>
+                                    {t.campaigns_count.toLocaleString('en')} Campaigns</span>
+                                <span id="team-leads">
+                                    <img src="https://i.ibb.co/Pw64dZ7/profile.png" 
+                                    style={{height: "38px", width: "42px", marginTop: "3px", marginRight: "-8px", marginBottom: "4px"}} alt="leads"/>
+                                    {t.leads_count.toLocaleString('en')} Leads</span>
+                            </div>
                         </li>))}</ul>
                 </div>
             </div>

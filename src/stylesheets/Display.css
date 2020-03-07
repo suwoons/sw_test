@@ -24,7 +24,6 @@
     color: gray;
     text-align: right;
 }
-
 .teams .container {
     padding: 20px;
     text-align: left;
@@ -45,24 +44,72 @@
     border: 1px solid rgb(223, 223, 223);
 }
 
+.teams .container .archived{
+    background-color: rgb(235, 238, 242);
+}
+
 .teams .container ul li #team_header { 
-    height: 20px;
-    padding: 15px;
+    height: 50px;
+    padding: 15px 15px 10px 15px;
+    position: relative;
+}
+
+.teams .container #favorite-star { 
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    margin: 5px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.teams .container ul li #team-image {
+    float: left;
+    height: 35px;
+    width: 35px;
+    border-radius: 10%;
+    margin-right: 10px;
+}
+
+.teams .container ul li #team-name {
+    font-size: 11pt;
+    font-weight: 600;
+    margin-top: -3px;
+}
+
+.teams .container ul li #team-date {
+    font-size: 9pt;
+    font-weight: 400;
+    color: rgb(190, 190, 190);
 }
 
 /* figure out how to cut off text... */
-.teams .container ul li #team_info { 
-    font-size: 9pt;
-    color: rgb(116, 116, 116);
-    text-overflow: ellipsis;
-    overflow: hidden; 
+.teams .container ul li #team_info_wrapper { 
     height: 50px;
-    white-space: wrap;
     display: inline-block;
-    padding: 0px 15px;
+    padding: 5px 15px;
+    overflow: hidden;
+}
+
+.teams .container ul li #team_info_wrapper p {
+    font-size: 8pt;
+    color: rgb(116, 116, 116);
+    height: 3em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .teams .container ul li #team_stats { 
     border-top: 1px solid rgb(223, 223, 223);
-    padding: 15px;
+    padding: 0px 0px;
+    font-size: 9pt;
+    color: rgb(146, 146, 146);
+}
+
+.teams .container ul li #team_stats img { 
+    filter: brightness(1.6) grayscale(1);
 }
