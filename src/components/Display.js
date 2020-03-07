@@ -91,7 +91,7 @@ class Display extends Component {
                                 ? "archived"
                                 : "")}>
                             <div class="row d-inline-flex w-100 ml-0" id="team_header">
-                                <img id="team-image" src={t.image} alt="image"></img>
+                                <img id="team-image" src={t.image} alt="team_image"></img>
                                 <span id="team-name">{t.name}
                                 <p id="team-date">{t.created_at !== undefined
                                     ? "Created " + t.created_at
